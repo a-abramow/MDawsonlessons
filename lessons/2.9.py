@@ -15,3 +15,10 @@ rent = input("Съем роскошной квартиры на Лесной: ")
 jet = input("Аренда самолета: ")
 gifts = input("Подарки: ")
 food = input("Обеды и ужины в ресторанах: ")
+staff = input("Жалование прислуги(дворецкий, водитель, повар, секретарь): ")
+guru = input("Оплата личному психоаналитику: ")
+games = input("Компьютерные игры: ")
+total = car + rent + jet + gifts + food + staff + guru + games
+print("\nОбщая сумма: ", total)
+input("\nНажмите Enter, чтобы выйти.")
+
