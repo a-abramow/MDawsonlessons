@@ -26,7 +26,7 @@ while guess != the_number:
         print("Больше", "у вас осталось", tries - 1, "попыток!")
     guess = int(input("Ваше предположение: "))
     tries -= 1
-    if tries == 1:  # Что сделать, чтобы в коде этого условия число попыток было равно 0?
+    if tries == 0 + 1:
         print("Fuck!", "Вы израсходовали свои попытки!")
         break
     if guess == the_number:

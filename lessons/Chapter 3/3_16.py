@@ -18,7 +18,6 @@ guess = int(input("Ваше предположение: "))
 tries = 1
 
 # Цикл отгадывания
-
 while guess != the_number:
     if guess > the_number:
         print("Меньше")
