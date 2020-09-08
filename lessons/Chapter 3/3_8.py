@@ -7,4 +7,5 @@ while True:
     if count == 5:
         continue
     print(count)
+
 input("\n\nНажмите Enter чтобы выйти.")
