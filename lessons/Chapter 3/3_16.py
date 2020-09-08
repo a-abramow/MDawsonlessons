@@ -18,6 +18,7 @@ guess = int(input("Ваше предположение: "))
 tries = 1
 
 # Цикл отгадывания
+
 while guess != the_number:
     if guess > the_number:
         print("Меньше")
@@ -28,4 +29,4 @@ while guess != the_number:
 
 print("Вам удалось отгадать число! Это в самом деле", the_number)
 print("Вы затратили на отгадывание всего лишь", tries, "попыток!\n")
-input("\n\nНажмите Enter, чтобы выйти.")
+input("\nНажмите Enter, чтобы выйти.")
