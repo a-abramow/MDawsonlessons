@@ -15,18 +15,18 @@ print("Постарайтесь отгадать его за три попытк
 # Начальные значения
 the_number = random.randint(1, 100)
 guess = int(input("Ваше предположение: "))
-tries = 4
+tries = 3
 
 # Цикл отгадывания
 
 while guess != the_number:
     if guess > the_number:
-        print("Меньше", "у вас осталось", tries, "попыток!")
+        print("Меньше", "у вас осталось", tries - 1, "попыток!")
     else:
-        print("Больше", "у вас осталось", tries, "попыток!")
+        print("Больше", "у вас осталось", tries - 1, "попыток!")
     guess = int(input("Ваше предположение: "))
     tries -= 1
-    if tries == 0:
+    if tries == 1:
         print("Fuck!", "Вы израсходовали свои попытки!")
         break
     if guess == the_number:
