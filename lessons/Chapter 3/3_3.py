@@ -4,4 +4,6 @@ print("-- Безопасность - наше второе имя\n.")
 password = input("ВВЕДИТЕ ПАРОЛЬ: ")
 if password == "secret":
     print("Доступ открыт")
+else:
+    print("Доступ закрыт")
 input("\n\nНажмите Enter чтобы выйти.")
