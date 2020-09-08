@@ -27,7 +27,7 @@ while guess != the_number:
     guess = int(input("Ваше предположение: "))
     tries -= 1
     if tries == 0 + 1:
-        print("Fuck!", "Вы израсходовали свои попытки!")
+        print("Ой, все!", "Вы израсходовали свои попытки!")
         break
     if guess == the_number:
         print("Вам удалось отгадать число! Это в самом деле", the_number)
