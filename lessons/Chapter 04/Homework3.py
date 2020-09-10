@@ -12,7 +12,7 @@ hint = word[0] + word[1] + word[2]
 score = 5
 
 # создадим анаграмму
-jumble = ""
+jumble = " "
 while word:
     position = random.randrange(len(word))
     jumble += word[position]
