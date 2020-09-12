@@ -30,5 +30,5 @@ while choice != "0":
             definition = geek[term]
             print("\n", term, "означает", definition)
         else:
-            print("\nУвы, этот термин мне не знаком: ", term)
+            print("\nУвы, этот термин мне незнаком: ", term)
 
