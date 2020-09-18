@@ -68,3 +68,50 @@ def display_board(board):
     print("\n\t", board[3], "|", board[4], "|", board[5])
     print("\t", "---------")
     print("\n\t", board[6], "|", board[7], "|", board[8], "\n")
+
+
+def legal_moves(board):
+    """Создает список доступных ходов."""
+    moves = []
+    for square in range(NUM_SQUARES):
+        if board[square] == EMPTY:
+            moves.append(square)
+    return moves
+
+
+def winner(board):
+    """Определяет победителя в игре."""
+    ways_to_win = ((0, 1, 2),
+                   (3, 4, 5),
+                   (6, 7, 8),
+                   (0, 3, 6),
+                   (1, 4, 7),
+                   (2, 5, 8),
+                   (0, 4, 8),
+                   (2, 4, 6))
+    for row in ways_to_win:
+        if board[row[0]] == board[row[1]] == board[row[2]] != EMPTY:
+            winner = board[row[0]]
+            return winner
+        if EMPTY not in board:
+            return TIE
+    return None
+
+
+def human_move(board, human):
+    """Получает ход человека"""
+    legal = legal_moves(board)
+    move = None
+    while move not in legal:
+        move = ask_number("Твой ход. Выбери одно из полей (0 - 8):", O, NUM_SQUARES)
+        if move not in legal:
+            print("\nСмешной человек! Это поле уже занято. Выбери другое.\n")
+    print("Ладно...")
+    return move
+
+
+def computer_move(board, computer, human):
+    """Делает ход за компьютерного противника"""
+    # создадим рабочую копию доски, потому что функция будет менять некоторые значения в списке
+    board = board[:]
+
