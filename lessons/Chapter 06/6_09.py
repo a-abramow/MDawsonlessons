@@ -126,3 +126,17 @@ def computer_move(board, computer, human):
             return move
         # выполнив проверку, отменим внесенные изменения
         board[move] = EMPTY
+
+    for move in legal_moves(board):
+        board[move] = human
+        # если следующим ходом может победить человек, блокируем этот ход
+        if winner(board) == human:
+            print(move)
+            return move
+        board[move] = EMPTY
+        # поскольку следующим ходом ни одна из сторон не может победить,
+        # выберем лучшее из доступных полей
+    for move in best_moves:
+        if move in legal_moves(board):
+            print(move)
+            return move
