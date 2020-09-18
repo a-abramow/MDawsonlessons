@@ -115,3 +115,14 @@ def computer_move(board, computer, human):
     # создадим рабочую копию доски, потому что функция будет менять некоторые значения в списке
     board = board[:]
 
+    # поля от лучшего к худшему
+    best_moves = (4, 0, 2, 6, 8, 1, 3, 5, 7)
+    print("Я выберу поле номер", end="")
+    for move in legal_moves(board):
+        board[move] = computer
+        # если следующим ходом может победить компьютер, выберем этот ход
+        if winner(board) == computer:
+            print(move)
+            return move
+        # выполнив проверку, отменим внесенные изменения
+        board[move] = EMPTY
