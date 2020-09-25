@@ -5,6 +5,6 @@
 
 try:
     num = float(input("Введиет число: "))
-except:
+except ValueError:
     print("Похоже, это не число!")
 
