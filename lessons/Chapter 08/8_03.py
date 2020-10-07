@@ -18,6 +18,7 @@ class Critter(object):
 
 # Основная часть
 
+Critter.status()
 print("Нахожу значение атрибута класса Critter.total:", end=" ")
 print(Critter.total)
 print("\nСоздаю зверюшек.")
