@@ -26,6 +26,7 @@ class Critter(object):
 
 # Основная часть
 
+
 crit = Critter("Бобик")
 crit.talk()
 
