@@ -13,6 +13,7 @@ class Critter(object):
     def __pass_time(self):
         self.hunger += 1
         self.boredom += 1
+
     @property
     def mood(self):
         unhappiness = self.hunger + self.boredom
@@ -30,3 +31,9 @@ class Critter(object):
         print("Меня зовут", self.name, ", и сейчас я чувствую себя", self.mood, "\n")
         self.__pass_time()
 
+    def eat(self, food=4):
+        print("Мррр... Спасибо!")
+        self.hunger -= food
+        if self.hunger < 0:
+            self.hunger = 0
+        self.__pass_time()
