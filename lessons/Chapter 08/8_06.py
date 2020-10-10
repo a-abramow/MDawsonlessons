@@ -37,3 +37,29 @@ class Critter(object):
         if self.hunger < 0:
             self.hunger = 0
         self.__pass_time()
+
+    def play(self, fun=4):
+        print("Уиии!")
+        self.boredom -= fun
+        if self.boredom < 0:
+            self.boredom = 0
+        self.__pass_time()
+
+
+def main():
+    crit_name = input("Как вы хотите назвать своего питомца?")
+    crit = Critter(crit_name)
+
+
+choice = None
+while choice != 0:
+    print \
+    ("""
+    Моя зверюшка
+    0 - Выйти
+    1 - Узнать о самочувствии зверюшки
+    2 - Покормить зверюшку
+    3 - Поиграть со зверюшкой
+    """)
+    choice = input("Выш выбор: ")
+    print()
