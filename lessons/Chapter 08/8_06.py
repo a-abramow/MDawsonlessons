@@ -1,6 +1,7 @@
 # Моя зверюшка
 # Виртуальный питомец, о котором пользователь может заботиться
 
+
 class Critter(object):
     """Виртуальный питомец"""
 
@@ -8,3 +9,24 @@ class Critter(object):
         self.name = name
         self.hunger = hunger
         self.boredom = boredom
+
+    def __pass_time(self):
+        self.hunger += 1
+        self.boredom += 1
+    @property
+    def mood(self):
+        unhappiness = self.hunger + self.boredom
+        if unhappiness < 5:
+            m = "прекрасно"
+        elif 5 <= unhappiness <= 10:
+            m = "неплохо"
+        elif 11 <= unhappiness <= 15:
+            m = "не сказать чтобы хорошо"
+        else:
+            m = "ужасно"
+        return m
+
+    def talk(self):
+        print("Меня зовут", self.name, ", и сейчас я чувствую себя", self.mood, "\n")
+        self.__pass_time()
+
