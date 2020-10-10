@@ -31,6 +31,15 @@ crit.talk()
 
 print("\nМою зверюшку зовут", end=" ")
 print(crit.name)
+print("\nПопробую изменить имя зверюшки на Мурзик...")
+crit.name = "Мурзик"
+print(crit.name)
+print("\nПопробую изменить имя зверюшки на пустую строку...")
+crit.name = " "
+print("\nМою зверюшку зовут", end=" ")
+print(crit.name)
+input("\n\nНажмите Enter, чтобы выйти.")
+
 
 
 
