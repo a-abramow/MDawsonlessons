@@ -12,3 +12,27 @@ class Critter(object):
     @property
     def name(self):
         return self.__name
+
+    @name.setter
+    def name(self, new_name):
+        if new_name == " ":
+            print("Имя зверюшки не может быть пустой строкой.")
+        else:
+            self.__name = new_name
+            print("Имя успешно заменено!")
+
+    def talk(self):
+        print("\nПривет, меня зовут ", self.name)
+
+# Основная часть
+
+crit = Critter("Бобик")
+crit.talk()
+
+print("\nМою зверюшку зовут", end=" ")
+print(crit.name)
+
+
+
+
+
