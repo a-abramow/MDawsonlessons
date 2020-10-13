@@ -14,7 +14,7 @@ while again != "n":
     for i in range(num):
         name = input("Имя игрока: ")
         score = random.randrange(100) + 1
-        player = games.Player(name,score)
+        player = games.Player(name, score)
         players.append(player)
 
     print("Вот результат игры: ")
@@ -24,4 +24,3 @@ while again != "n":
     again = games.ask_yes_no("\nХотите сыграть еще раз? (y/n): ")
 
 input("\n\nНажмите Enter, чтобы выйти.")
-
