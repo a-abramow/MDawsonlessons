@@ -23,7 +23,7 @@ class Player(object):
     def ask_number(self, question, low, high):
         """Прости ввести число из заданного диапазона."""
         response = None
-        while response not in range(low,high):
+        while response not in range(low, high):
             response = int(input(question))
         return response
     if __name__ == "__main__":
