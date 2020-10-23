@@ -27,7 +27,9 @@ class Application(Frame):
         self.bttn3.grid()
         self.bttn3["text"] = "И я!"
 
+
 # основная часть
+
 
 root = Tk()
 root.title("Бесполезные кнопки - 2")
@@ -36,4 +38,3 @@ root.geometry("150x85")
 app = Application(root)
 
 root.mainloop()
-
