@@ -23,3 +23,9 @@ class Application(Frame):
     def update_count(self):
         self.bttn_clicks += 1
         self.bttn["text"] = "Количество щелчков: " + str(self.bttn_clicks)
+
+root = Tk()
+root.title("Количество щелчков")
+root.geometry("200x50")
+app = Application(root)
+root.mainloop()
