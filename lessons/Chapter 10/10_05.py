@@ -35,7 +35,7 @@ class Application(Frame):
         # флажок "Драма"
         self.likes_drama = BooleanVar()
         Checkbutton(self,
-                    text="Комедия",
+                    text="Драма",
                     variable=self.likes_drama,
                     command=self.update_text
                     ).grid(row=3, column=0, sticky=W)
@@ -43,10 +43,28 @@ class Application(Frame):
         # флажок "Фильм о любви"
         self.likes_romance = BooleanVar()
         Checkbutton(self,
-                    text="Комедия",
+                    text="Фильм о любви",
                     variable=self.likes_romance,
                     command=self.update_text
                     ).grid(row=4, column=0, sticky=W)
+
+        # текстовая область с результатами
+        self.results_txt = Text(self, width=40, height=5, wrap=WORD)
+        self.results_txt.grid(row=5, column=0, columnspan=3)
+
+    def update_text(self):
+        """Обновляет текстовый элемент по мере того, как пользователь выбирает свои любимые киножанры"""
+        likes = ""
+        if self.likes_comedy.get():
+            likes += "Вам нравятся комедии.\n"
+        if self.likes_drama.get():
+            likes += "Вам нравятся драмы.\n"
+        if self.likes_romance.get():
+            likes += "Вам нравятся фильмы о любви.\n"
+        self.results_txt.delete(0.0, END)
+        self.results_txt.insert(0.0, likes)
+
+
 
 
 root = Tk()
